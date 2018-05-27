@@ -1,0 +1,40 @@
+<div class="eb-markdown material-exercise-readme-content"><h2>HW 3</h2>
+<p>In this homework, you are able to practice <em>generic</em> class in Java. Implement the <strong>DoublyLinkedSeq</strong> class.</p>
+<p>Submit the implementation of the DoubleLinkedSeq class through Elice system. You have to fil out the methods in <strong>DoublyLinkedSeq.java and Node.java</strong> file in the Elice system. In the test, we are not testing Node.java file, but you will need this file to implement DoublyLinkedSeq.</p>
+<p>For the details, please read the document in KLMS.</p>
+<ul>
+<li>public void advanceNstepForward(int n)</li>
+</ul>
+<hr>
+<pre><code>* move cursor forward to the n steps.
+* Example
+  * ['h','e','l','l','o'], current = 0, getCurrent(): 'h'; 
+  * advanceNstepForward(4);
+  *  -&gt; current = 4, getCurrent(): 'o'
+* Parameter
+    * n - cursor move to n steps forward if possible
+* Precondition
+    * isCurrent() returns true.
+    * There are element at current cursor position + n steps. 
+* Throws: IllegalStateException
+    * indicate that
+    - 1) there is no current element. 
+    - 2) there is no element at target position, so advance may not be called and current cursor must be remained at the original position.
+</code></pre>
+<ul>
+<li>public void advanceNstepBackward(int n)</li>
+</ul>
+<hr>
+<pre><code>* similar to the advanceNstepForward(int n), 
+* move cursor "backward" to the n steps.
+* Parameter
+    * n - cursor move to n steps backward if possible
+* Precondition
+    * isCurrent() returns true.
+    * There are element at current cursor position - n steps. 
+* Throws: IllegalStateException
+    * indicate that
+    - 1) there is no current element. 
+    - 2) there is no element at target position, so advance may not be called and current cursor must be remained at the original position.
+</code></pre>
+</div>

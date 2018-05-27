@@ -1,0 +1,39 @@
+<div class="eb-markdown material-exercise-readme-content"><h2>HW 4</h2>
+<p>In homework 4, you are required to implement a simple calculator called StackCalculator using LinkedStack.
+StackCalculator receives an infix arithmetic expression and returns the result of the expression.
+The calculation is done by two steps, changing infix expression to postfix expression (<strong>changeToPostfix</strong>), and evaluating postfix expression to achieve the result (<strong>evaluate</strong>).</p>
+<p>To simplify the problem, we set some limitations (rules) on StackCalculator.</p>
+<ol>
+<li>StackCalculator only deals with four basic operators, *<em>+, -, <em>, /</em></em> and three kinds of brackets, which are <strong>(, ), {,}, [,]</strong>. The operation order is described as below.</li>
+</ol>
+<ul>
+<li>*, / -&gt; +,-
+<ul>
+<li>Multiplication and division should be operated before addition and subtraction.</li>
+</ul>
+</li>
+<li>() -&gt; {} -&gt; []
+<ul>
+<li>Equations in parentheses should be calculated before equations in curly brackets.</li>
+<li>Equations in curly brackets should be calculated before equations in square brackets.</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>StackCalculator can receive the input expression consists of the operators, three kinds of brackets, and any real number. Each component will be separated with a space, e.g. “3.25 * 12 – 8 + -7”. The components of converted postfix expression should be separated with a space too.</p>
+</li>
+<li>
+<p>StackCalculator cannot divide the number by zero. Therefore, if such expression (input or intermediate) is given, StackCalculator throws the DividedByZeroException.
+StackCalculator cannot calculate the input expression with unbalanced parenthesis. Therefore, if such expression is given, StackCalculator throws the UnbalancedParenthesisException.</p>
+</li>
+<li>
+<p>StackCalculator utilizes LinkedStack, not java.util.Stack.</p>
+</li>
+</ol>
+<p>The claims caused by the problem that is out of the limitations (rules) will not be allowed.</p>
+<p>Submit the implementation of the StackCalculator class through Elice system.
+You have to implement two methods (<strong>changeToPostfix and evaluate</strong>) in <strong>StackCalculator.java</strong> file in the Elice system.
+Please <strong>do not change</strong> the parameters, modifiers, and exceptions in the method.</p>
+<p>For your information, Figure 6.10 (p. 379) and Figure 6.8 (p. 375) will be a help to you.</p>
+</div>

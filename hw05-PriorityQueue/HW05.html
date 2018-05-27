@@ -1,0 +1,71 @@
+<div class="eb-markdown material-exercise-readme-content"><h2>HW 5</h2>
+<p>In this homework, you are able to practice queue data structure.</p>
+<ol>
+<li>Implement the PQDirect class and PQOrdinary class according to the specification given in Figure 7.12 in the textbook.</li>
+</ol>
+<h3>PQDirect</h3>
+<p>You can implement this class by implementing your own Node class</p>
+<h3>PQOrdinary</h3>
+<p>You can implement this class by using ArrayQueue class. <strong>Please don’t erase queues parameter and getQueues() method.</strong></p>
+<ol start="2">
+<li>Implement four key methods of Double-ended queue class</li>
+</ol>
+<h2>Deque</h2>
+<p>You implement the additional methods of the inheritor, using the variables of the super class with the keyword “super.” Please do not make the identical variable to those of the ArrayQueue, such as data, manyItems, front, and rear. Except those, you can make any method and variable.</p>
+<ul>
+<li>public void addFirst(E element)
+Insert a new item at the front of this queue. If the addition would take this queue beyond its current capacity, then the capacity is increased before adding the new item. The new item may be the null reference.</li>
+</ul>
+<ul>
+<li>param element
+The element to be pushed at the front of queue</li>
+<li>Postcondition
+The item has been pushed onto this queue.</li>
+<li>Exception OutOfMemoryError
+Indicates insufficient memory for increasing the queue’s capacity</li>
+<li>Note
+An attempt to increase the capacity beyond</li>
+</ul>
+<ul>
+<li>public void addLast(E element)
+Insert a new item at the rear of this queue. If the addition would take this queue beyond its current capacity, then the capacity is increased before adding the new item. The new item may be the null reference.</li>
+</ul>
+<ul>
+<li>param element
+The element to be pushed at the rear of queue</li>
+<li>Postcondition
+The item has been pushed onto this queue.</li>
+<li>Exception OutOfMemoryError
+Indicates insufficient memory for increasing the queue’s capacity</li>
+<li>Note
+An attempt to increase the capacity beyond</li>
+</ul>
+<ul>
+<li>public E removeFirst()
+Get the front item, removing it from this queue.</li>
+</ul>
+<ul>
+<li>Precondition
+This queue is not empty.</li>
+<li>Return
+The return value is the front item of this queue, and the item has been removed.</li>
+<li>Exception NoSuchElementException
+Indicates that this queue is empty.</li>
+<li>Note
+The front item means the first input using the add method of the ArrayQueue class or the latest input of addFirst method of the Deque.</li>
+</ul>
+<ul>
+<li>public E removeLast()
+Get the last item, removing it from this queue.</li>
+</ul>
+<ul>
+<li>Precondition
+This queue is not empty.</li>
+<li>Return
+The return value is the last (rear) item of this queue, and the item has been removed.</li>
+<li>Exception NoSuchElementException
+Indicates that this queue is empty</li>
+<li>Note
+The last item means the latest input using the add method of the ArrayQueue class or the addLast method of the Deque.</li>
+</ul>
+</div>

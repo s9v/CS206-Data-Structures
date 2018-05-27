@@ -1,0 +1,90 @@
+<div class="eb-markdown material-exercise-readme-content"><p>You have to fill out the methods of two classes: Hanoi and RecursiveCalculator</p>
+<hr>
+<h2>Hanoi.java</h2>
+<h3>Hanoi(int height)</h3>
+<p>It is a constructor method.</p>
+<p>Declarations of IntegerLinkedStack objects are implemented already.</p>
+<p>You have to make a tower of ‘height’ at towers[0].</p>
+<ul>
+<li>
+<p>‘height’ is not negative integer.</p>
+</li>
+<li>
+<p>postcondition : towers[0] has from 1 to ‘height’, if ‘height’ is larger than 0. Otherwise, towers[0] is empty.
+ex) If (height == 3) towers[0] has 1, 2, 3.</p>
+</li>
+</ul>
+<h3>moveTower()</h3>
+<p>Move tower[0] to tower[2].</p>
+<p>You have to use moveTower(disk, source, dest, spare)</p>
+<p>You can refer to web sites. For example, <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi" target="_blank">https://en.wikipedia.org/wiki/Tower_of_Hanoi</a></p>
+<ul>
+<li>postcondition : towers[2] has from 1 to ‘height’, if ‘height’ is larger than 0. Otherwise towers[0] is empty.</li>
+</ul>
+<h3>moveTower(disk, source, dest, spare)</h3>
+<p>Move tower of ‘disk’ (from 1 to ‘disk’) from ‘source’ to ‘dest’ using ‘spare’</p>
+<p>It must be in recursive form.</p>
+<p>Please do not modify the first line in function.</p>
+<ul>
+<li>postcondition : towers[dest] has from 1 to ‘disk’. Other disks (which numbers are larger than ‘disk’) remain where they were.</li>
+</ul>
+<h3>toString()</h3>
+<p>You must not edit the toString method.</p>
+<p>Please use toString method to test your code.</p>
+<hr>
+<h2>RecursiveCalculator.java</h2>
+<p>RecursiveCalculator is a recursive form of calculator.</p>
+<p>The grammar is below.</p>
+<p>‘|’ means ‘or’ (A = B | C means A = B or A = C)</p>
+<ul>
+<li>
+<p>expr = expr + term | expr - term | term</p>
+</li>
+<li>
+<p>term = term * power | term / power | power</p>
+</li>
+<li>
+<p>power = factor ^ power | factor</p>
+</li>
+<li>
+<p>factor = (expr) | number</p>
+</li>
+</ul>
+<p>Input is always a form of expr. The numbers and operators are separated by single space.
+ex) “( 1 + 2 ) – 3”
+The parentheses are always balanced and only “()” is used, neither “{}” nor “[]” is used.</p>
+<p>*Example</p>
+<ol>
+<li>“3 + 2 * 1”</li>
+</ol>
+<ul>
+<li>expr:“3 + 2 * 1”</li>
+<li>In this case, expr = expr + term, because there is “+”. So expr:“3” and term:“2 * 1”. - will return expr"3" + term:“2 * 1”</li>
+<li>For expr:“3”, expr = term. Then term:“3”.</li>
+<li>For term:“3”, term = power. Then power:“3”.</li>
+<li>For power:“3”, power = factor. Then factor:“3”.</li>
+<li>For factor:“3”, factor = number. Then number:3. Return 3.</li>
+<li>For term:“2 * 1”, term = term * power. Then term:“2” and power"1" - will return term"2" * power"1"</li>
+<li>Similiarly, “3”, “2” and “1” are number:2 and number:1. Return 2 and 1</li>
+<li>Then term:“2 * 1” is now 2 * 1. Return 2</li>
+<li>Then expr “3 + 2 * 1” is now 3 + 2. Return 5</li>
+</ul>
+<ol start="2">
+<li>“3 - 2 - 1”</li>
+</ol>
+<ul>
+<li>expr:“3 - 2 - 1”</li>
+<li>In this case, expr = expr - term, because there is “-”. So expr:“3 - 2” and term:“1”.</li>
+<li>Not term:“2 - 1”. There must not be “+” or “-” in term. (In parenthesis is only possible.)</li>
+<li>You MUST find the LAST ˝+˝ or ˝-˝.</li>
+<li>You can imagine the case that you split “3 - 2 - 1” as “3” - “2 - 1”. Then the result will be 2 not 0.</li>
+<li>In case of ^, it is opposite.</li>
+</ul>
+<p>You will implement the parsing system in recursive form.</p>
+<p>It is not a self-recursive form.</p>
+<p>It is a kind of multilevel-recursive form.</p>
+<p>parseExpr() would call parseTerm(). parseTerm() would call parsePower(). parsePower() would call parseFactor().</p>
+<p>And parseFactor() would call parseExpr().</p>
+<p>DO NOT CHANGE the delimiter, single space.</p>
+<p>Recursive logs will be tested. PLEASE check your log.</p>
+</div>
