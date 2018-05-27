@@ -1,6 +1,6 @@
 # CS206-Data-Structures
 
-My solutions to (CS206 @ [KAIST](https://kaist.edu) 2017 Spring) Data Structures course assignments.
+My solutions to (CS206 @ [KAIST](http://kaist.edu) 2017 Spring) Data Structures course assignments.
 
 Scores:
 
